@@ -77,4 +77,7 @@ Tips
 
 - Provisioning directory includes `Vagrantfile` with two virtual machines, one with Ansible installed, second in 'blank' state, to try provisioning on virtual machine before going live.
 - Keep provisioning. Keep provisioning scripts up-to-date with your application's requirements.
+- By default your deploy user does not have sudoer rights. If you need install something or change some system configs there are 2 ways to do this:
+    - Login using `chef` user, install\change whatever you need.
+    - Login using `chef` user, grant your deploy user sudoer rights, switch back and do whatever you need
 - Pull-requests are appreciated
