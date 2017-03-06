@@ -33,8 +33,8 @@ BASE_DIR=${BASE_DIR:-$HOME/Projects}
 read -p "Please provide project name [myapp]: " PROJECT_NAME
 PROJECT_NAME=${PROJECT_NAME:-myapp}
 
-read -p "Please provide ruby version [2.2.2]: " RUBY_VERSION
-RUBY_VERSION=${RUBY_VERSION:-2.2.2}
+read -p "Please provide ruby version [2.4.0]: " RUBY_VERSION
+RUBY_VERSION=${RUBY_VERSION:-2.4.0}
 
 read -p "Please provide staging server address: [$PROJECT_NAME.your-domain.com] " STAGE_ADDR
 STAGE_ADDR=${STAGE_ADDR:-$PROJECT_NAME.your-domain.com}
@@ -185,8 +185,8 @@ fi
 #   --quiet \
 #   --verbose
 
-git remote add origin $REPO_URL
-git push -u origin master
+#git remote add origin $REPO_URL
+#git push -u origin master
 
 cd $CURRENT_PATH
 printf "\n"
