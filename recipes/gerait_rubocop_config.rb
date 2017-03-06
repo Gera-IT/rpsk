@@ -1,4 +1,4 @@
-copy_from_repo('.rubocop.yml', :repo => 'https://raw.githubusercontent.com/Gera-IT/gerait_rubocop_config/master/')
+copy_file("#{ Dir.pwd }/.rubocop.yml", "#{ destination_root }/.rubocop.yml")
 
 if prefer(:git, true)
   git(:add => '.rubocop.yml')
