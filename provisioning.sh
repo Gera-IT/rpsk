@@ -1,8 +1,4 @@
-#
-# ####################################
-# # Provisioning project setup start #
-# ####################################
-#
+#!/bin/bash
 
 printf "Creating provisioning project...\n"
 PP_NAME="provisioning"
@@ -24,9 +20,3 @@ git commit -qm "initial commit"
 
 printf "$PP_NAME project created...\n"
 printf "Please review $PP_DIR/group_vars/staging and change default passwords\n"
-
-#
-# ##################################
-# # Provisioning project setup end #
-# ##################################
-#

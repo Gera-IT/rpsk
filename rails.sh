@@ -1,3 +1,4 @@
+#!/bin/bash
 
 AP_NAME=app
 AP_DIR="$BASE_DIR/$AP_NAME"
