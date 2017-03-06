@@ -26,7 +26,7 @@ read -p "Please provide ruby version [2.4.0]: " RUBY_VERSION
 RUBY_VERSION=${RUBY_VERSION:-2.4.0}
 
 read -p "Please provide staging server address: [$PROJECT_NAME.your-domain.com] " STAGE_ADDR
-STAGE_ADDR=${STAGE_ADDR:-$PROJECT_NAME.your-domain.com}
+STAGE_ADDR=${STAGE_ADDR:-$192.168.33.10:2200}
 
 read -p "Please provide staging server application user: [$PROJECT_NAME] " STAGE_USER
 STAGE_USER=${STAGE_USER:-$PROJECT_NAME}

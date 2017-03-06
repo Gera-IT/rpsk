@@ -1,0 +1,2 @@
+./initial.sh
+./provision.sh
