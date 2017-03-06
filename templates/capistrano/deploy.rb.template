@@ -2,7 +2,6 @@ set :application, '%PROJECT_NAME%'
 
 set :ssh_options, :forward_agent => true
 
-set :scm, :git
 set :repo_url, '%REPO_URL%'
 
 set :format, :pretty

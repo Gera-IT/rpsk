@@ -1,7 +1,7 @@
 Prepare application:
 ====================
 
-$ ansible-galaxy install rvm_io.rvm1-ruby
+$ ansible-galaxy install rvm_io.ruby
 
 Edit ./inventories/staging (usually just [staging] section)
 

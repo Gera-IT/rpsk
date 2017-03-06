@@ -42,20 +42,8 @@ STAGE_URL="$STAGE_USER@$STAGE_ADDR"
 read -p "Please provide path to your public key: [$HOME/.ssh/id_rsa.pub] " PUBKEY_PATH
 PUBKEY_PATH=${PUBKEY_PATH:-$HOME/.ssh/id_rsa.pub}
 
-#
-# #######################
-# # Prerequisites start #
-# #######################
-#
-
-BASE_DIR="$BASE_DIR/$PROJECT_NAME"
-mkdir -p $BASE_DIR
-cd $BASE_DIR
-
 rvm install $RUBY_VERSION
 
-#
-# #####################
-# # Prerequisites end #
-# #####################
-#
+source "$CURRENT_PATH/rails.sh"
+source "$CURRENT_PATH/deploy.sh"
+source "$CURRENT_PATH/provisioning.sh"

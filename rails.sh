@@ -1,10 +1,9 @@
 #!/bin/bash
 
-AP_NAME=app
-AP_DIR="$BASE_DIR/$AP_NAME"
-mkdir -p $AP_DIR
-cd $AP_DIR
-AP_GEMSET="$PROJECT_NAME-app"
+PROJECT_DIR="$BASE_DIR/$PROJECT_NAME"
+mkdir -p $PROJECT_DIR
+cd $PROJECT_DIR
+AP_GEMSET="$PROJECT_NAME"
 
 if [[ -f ".ruby-version" ]] ; then
   printf "Using existing gemset...\n"
