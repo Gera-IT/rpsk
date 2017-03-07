@@ -97,15 +97,6 @@ PROJECT_NAME=${PROJECT_NAME:-myapp}
 read -p "Please provide ruby version [2.4.0]: " RUBY_VERSION
 RUBY_VERSION=${RUBY_VERSION:-2.4.0}
 
-read -p "Please provide staging server address: [$PROJECT_NAME.your-domain.com] " STAGE_ADDR
-STAGE_ADDR=${STAGE_ADDR:-$VAGRANT_IP}
-
-read -p "Please provide staging server application user: [$PROJECT_NAME] " STAGE_USER
-STAGE_USER=${STAGE_USER:-$PROJECT_NAME}
-
-read -p "Please provide initial provisioning user name: [root] " INITIAL_USER
-INITIAL_USER=${INITIAL_USER:-root}
-
 if [[ $INSTALL_RAILS_APPLICATION = 1 ]]; then
   read -p "Please provide git repository address for Rails Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " REPO_URL
   REPO_URL=${REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
@@ -119,6 +110,15 @@ fi
 if [[ $INSTALL_ANSIBLE = 1 ]]; then
   read -p "Please provide git repository address for Ansible Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " ANSIBLE_REPO_URL
   ANSIBLE_REPO_URL=${ANSIBLE_REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+
+  read -p "Please provide staging server address: [$PROJECT_NAME.your-domain.com] " STAGE_ADDR
+  STAGE_ADDR=${STAGE_ADDR:-$VAGRANT_IP}
+
+  read -p "Please provide staging server application user: [$PROJECT_NAME] " STAGE_USER
+  STAGE_USER=${STAGE_USER:-$PROJECT_NAME}
+
+  read -p "Please provide initial provisioning user name: [root] " INITIAL_USER
+  INITIAL_USER=${INITIAL_USER:-root}
 fi
 
 STAGE_URL="$STAGE_USER@$STAGE_ADDR"

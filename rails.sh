@@ -38,6 +38,11 @@ fi
 #   --quiet \
 #   --verbose
 
+cd .
+bundle install
+git add .
+git commit -m 'Gemfile.lock'
+
 git remote add origin $REPO_URL
 git push -u origin master
 
