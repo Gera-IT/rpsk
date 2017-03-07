@@ -20,6 +20,8 @@ cd  $PP_DIR
 git init
 git add .
 git commit -qm "initial commit"
+git remote add origin $ANSIBLE_REPO_URL
+git push -u origin master
 
 printf "$PP_NAME project created...\n"
 printf "Please review $PP_DIR/group_vars/staging and change default passwords\n"

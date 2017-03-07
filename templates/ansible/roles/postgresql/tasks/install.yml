@@ -7,7 +7,7 @@
     update_cache: yes
   with_items:
     - python-psycopg2
-    - postgresql-server-dev-9.6
+    - postgresql-9.5
     - python-pycurl
     - libpq-dev
 

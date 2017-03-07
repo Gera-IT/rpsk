@@ -38,8 +38,8 @@ fi
 #   --quiet \
 #   --verbose
 
-#git remote add origin $REPO_URL
-#git push -u origin master
+git remote add origin $REPO_URL
+git push -u origin master
 
 cd $CURRENT_PATH
 printf "\n"

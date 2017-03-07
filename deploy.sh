@@ -28,5 +28,7 @@ echo '.ruby-gemset' > .gitignore
 git init
 git add .
 git commit -qm 'initial commit'
+git remote add origin $CAPISTRANO_REPO_URL
+git push -u origin master
 
 printf "$DP_NAME project created...\n"

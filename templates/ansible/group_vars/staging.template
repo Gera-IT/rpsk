@@ -33,7 +33,7 @@ rvm1_autolib_mode: 0
 rvm1_rubies:
   - %RUBY_VERSION%
 
-app_ruby_env: "{{ rvm1_rubies[0] }}@{{ app_name}}-app"
+app_ruby_env: "{{ rvm1_rubies[0] }}@{{ app_name}}"
 
 # secrets
 admin_name: "admin"
