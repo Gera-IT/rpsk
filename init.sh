@@ -106,14 +106,20 @@ STAGE_USER=${STAGE_USER:-$PROJECT_NAME}
 read -p "Please provide initial provisioning user name: [root] " INITIAL_USER
 INITIAL_USER=${INITIAL_USER:-root}
 
-read -p "Please provide git repository address for Rails Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " REPO_URL
-REPO_URL=${REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+if [[ $INSTALL_RAILS_APPLICATION = 1 ]]; then
+  read -p "Please provide git repository address for Rails Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " REPO_URL
+  REPO_URL=${REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+fi
 
-read -p "Please provide git repository address for Capistrano Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " CAPISTRANO_REPO_URL
-CAPISTRANO_REPO_URL=${CAPISTRANO_REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+if [[ $INSTALL_CAPISTRANO = 1 ]]; then
+  read -p "Please provide git repository address for Capistrano Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " CAPISTRANO_REPO_URL
+  CAPISTRANO_REPO_URL=${CAPISTRANO_REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+fi
 
-read -p "Please provide git repository address for Ansible Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " ANSIBLE_REPO_URL
-ANSIBLE_REPO_URL=${ANSIBLE_REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+if [[ $INSTALL_ANSIBLE = 1 ]]; then
+  read -p "Please provide git repository address for Ansible Application: [git@github.com:some_github_user/$PROJECT_NAME.git] " ANSIBLE_REPO_URL
+  ANSIBLE_REPO_URL=${ANSIBLE_REPO_URL:-git@github.com:some_github_user/$PROJECT_NAME.git}
+fi
 
 STAGE_URL="$STAGE_USER@$STAGE_ADDR"
 
