@@ -5,5 +5,8 @@
   remote_user: "{{ provisioner_user }}"
   roles:
     - application
-    - { role: rvm_io.rvm1-ruby, sudo: true, sudo_user: "{{ deployer_user }}" }
+    - { role: rvm_io.ruby,
+        sudo: true,
+        sudo_user: "{{ deployer_user }}"
+      }
     - ruby_env

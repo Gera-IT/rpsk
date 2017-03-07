@@ -9,6 +9,6 @@ set :rake, 'bundle exec rake'
 
 set :deploy_to, '/home/%PROJECT_NAME%/application'
 
-set :branch, ENV['BRANCH'] || 'develop'
+set :branch, ENV['BRANCH'] || 'master'
 
 set :unicorn_config_path, "#{current_path}/config/unicorn.rb"

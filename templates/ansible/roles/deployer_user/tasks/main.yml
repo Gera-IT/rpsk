@@ -18,4 +18,4 @@
   authorized_key:
     user: "{{ deployer_user }}"
     key: "{{ item.key }}"
-  with_items: deployer_public_keys
+  with_items: "{{ deployer_public_keys }}"

@@ -5,5 +5,8 @@
   gather_facts: no
   sudo: yes
   remote_user: "{{ initial_user }}"
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo apt-get -y install python-simplejson
   roles:
     - initial_setup
