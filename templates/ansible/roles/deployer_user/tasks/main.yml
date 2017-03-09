@@ -1,6 +1,6 @@
 ---
 - name: "try to SSH as deployer"
-  sudo: no
+  become: no
   ignore_errors: yes
   local_action: command ssh -o PasswordAuthentication=no {{ deployer_user }}@{{ inventory_hostname }}
   register: ssh_deployer_response

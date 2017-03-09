@@ -2,7 +2,8 @@
 # file: roles/application/tasks/monitoring.yml
 
 - name: make sure we have passwdfile for monit
-  sudo: yes
+  become: yes
+  become_method: sudo
   htpasswd:
     path: /etc/nginx/monit_passwd
     name: "{{ monit_user }}"
@@ -15,7 +16,8 @@
     - monit
 
 - name: make sure we have passwdfile for munin
-  sudo: yes
+  become: yes
+  become_method: sudo
   htpasswd:
     path: /etc/nginx/munin_passwd
     name: "{{ munin_user }}"

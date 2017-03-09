@@ -6,7 +6,7 @@
   roles:
     - application
     - { role: rvm_io.ruby,
-        sudo: true,
-        sudo_user: "{{ deployer_user }}"
+        become: true,
+        become_user: "{{ deployer_user }}"
       }
     - ruby_env

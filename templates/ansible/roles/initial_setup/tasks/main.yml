@@ -1,6 +1,6 @@
 ---
 - name: "try to SSH as provisioner"
-  sudo: no
+  become: no
   ignore_errors: yes
   local_action: command ssh -o PasswordAuthentication=no {{ provisioner_user }}@{{ inventory_hostname }}
   register: ssh_provisioner_response

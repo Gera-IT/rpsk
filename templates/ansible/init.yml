@@ -3,7 +3,8 @@
 - name: init all servers
   hosts: all
   gather_facts: no
-  sudo: yes
+  become: yes
+  become_method: sudo
   remote_user: "{{ initial_user }}"
   pre_tasks:
     - name: 'install python2'

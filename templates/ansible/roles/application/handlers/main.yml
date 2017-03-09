@@ -1,5 +1,6 @@
 ---
 # file: roles/application/handlers/main.yml
 - name: reload nginx
-  sudo: yes
+  become: yes
+  become_method: sudo
   command: service nginx reload

@@ -3,6 +3,7 @@
 - name: create deployer user
   hosts: app
   remote_user: "{{ provisioner_user }}"
-  sudo: yes
+  become: yes
+  become_method: sudo
   roles:
     - deployer_user

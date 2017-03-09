@@ -1,8 +1,8 @@
 ---
 # file: roles/application/tasks/database.yml
 - name: setup pg database
-  sudo: true
-  sudo_user: postgres
+  become: true
+  become_user: postgres
   postgresql_db:
     name: "{{ database_name }}"
   tags:
@@ -11,8 +11,8 @@
     - postgresql
 
 - name: setup pg user
-  sudo: true
-  sudo_user: postgres
+  become: true
+  become_user: postgres
   postgresql_user:
     name: "{{ database_user }}"
     db: "{{ database_name }}"

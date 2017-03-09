@@ -1,7 +1,8 @@
 ---
 # file: roles/ruby_env/tasks/main.yml
 - name: prepare gemset
-  sudo: yes
-  sudo_user: "{{ deployer_user }}"
+  become: yes
+  become_method: sudo
+  become_user: "{{ deployer_user }}"
   command: bash -lc "rvm use {{ app_ruby_env }} --create && gem install bundler --no-ri --no-rdoc"
 
