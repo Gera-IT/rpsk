@@ -1,7 +1,8 @@
 ---
 # file: roles/application/tasks/nginx.yml
 - name: be sure site is configured
-  sudo: yes
+  become: yes
+  become_method: sudo
   template:
     src: site.j2
     dest: /etc/nginx/sites-available/{{ app_name }}
@@ -10,7 +11,8 @@
     mode: 0644
 
 - name: enable site
-  sudo: yes
+  become: yes
+  become_method: sudo
   file:
     src: /etc/nginx/sites-available/{{ app_name }}
     dest: /etc/nginx/sites-enabled/{{ app_name }}

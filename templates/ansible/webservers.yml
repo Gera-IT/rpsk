@@ -3,6 +3,7 @@
 - name: prepare web server
   hosts: web
   remote_user: "{{ provisioner_user }}"
-  sudo: yes
+  become: yes
+  become_method: sudo
   roles:
     - nginx

@@ -1,8 +1,9 @@
 ---
 # file: roles/application/tasks/directories.yml
 - name: create application directories
-  sudo: yes
-  sudo_user: "{{ deployer_user }}"
+  become: yes
+  become_method: sudo
+  become_user: "{{ deployer_user }}"
   file:
     path: /home/{{ deployer_user }}/application/shared/{{ item }}
     owner: "{{ deployer_user }}"
@@ -17,8 +18,9 @@
     - app
 
 - name: upload shared files
-  sudo: yes
-  sudo_user: "{{ deployer_user }}"
+  become: yes
+  become_method: sudo
+  become_user: "{{ deployer_user }}"
   template:
     src: "{{ item }}.j2"
     dest: /home/{{ deployer_user }}/application/shared/config/{{ item }}
